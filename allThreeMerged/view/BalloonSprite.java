@@ -26,7 +26,6 @@ public class BalloonSprite extends BeatTheHeartSprite implements MouseListener {
 		}
 		
 	}
-
 }
 /*package view;
 
