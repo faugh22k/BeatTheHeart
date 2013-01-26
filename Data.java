@@ -5,13 +5,11 @@ import java.util.ArrayList;
 public class Data {
 	
 	private int score;
-	private ArrayList<Balloon> balloons;
-	private ArrayList<Goodie> goodies;
+	private ArrayList<Stuff> objects;
 	
 	public Data(){
 		score = 0;
-		balloons = new ArrayList<Balloon>(20);
-		goodies = new ArrayList<Goodie>(20);
+		objects = new ArrayList<Stuff>(40);
 	}
 
 	public int getScore() {
@@ -22,13 +20,10 @@ public class Data {
 		this.score = score;
 	}
 
-	public ArrayList<Balloon> getBalloons() {
-		return balloons;
+	public ArrayList<Stuff> getStuff() {
+		return objects;
 	}
 
-	public ArrayList<Goodie> getGoodies() {
-		return goodies;
-	}
 
 	
 	

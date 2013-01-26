@@ -2,15 +2,12 @@ package beatTheHeart;
 
 import java.awt.geom.Point2D;
 
-public class Goodie {
+public class Goodie extends Stuff{
 	
-	private Point2D position;
-	private int speed;
 	private GoodieTypes type;
 	
-	public Goodie(int x, int y){
-		position.setLocation(x, y);
-		speed = 5;
+	public Goodie( int speed, Point2D position, int id ){
+		super( speed, position, id );
 		
 		double tmp = Math.random();
 		GoodieTypes[] values = type.values();
@@ -24,19 +21,19 @@ public class Goodie {
 	}
 	
 	public Point2D getPosition() {
-		return position;
+		return super.getPosition();
 	}
 
-	public void setPosition(Point2D position) {
-		this.position = position;
+	public void setPosition(Point2D GoodiePosition) {
+		position = GoodiePosition;
 	}
 
 	public int getSpeed() {
-		return speed;
+		return super.getSpeed();
 	}
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	public void setSpeed(int GoodieSpeed) {
+		speed = GoodieSpeed;
 	}
 
 	public GoodieTypes getType() {

@@ -3,22 +3,17 @@ package beatTheHeart;
 import java.awt.geom.Point2D;
 
 
-public class Balloon {
+public class Balloon extends Stuff{
 	
 	private BalloonColors color;
-	
-	private Point2D balloonPosition;
-	
-	private double balloonSpeed;
 	
 	private int numberOfClicks;
 	
 	private boolean rising;
 	
-	public Balloon(double speed, double positionX, double positionY ){
+	public Balloon( int speed, Point2D position, int balloonID ){
+		super( speed, position, balloonID );
 		
-		balloonSpeed = speed;
-		balloonPosition.setLocation( positionX, positionY);
 		rising = true;
 	}
 
@@ -34,24 +29,28 @@ public class Balloon {
 
 
 	public Point2D getBalloonPosition() {
-		return balloonPosition;
+		return super.getPosition();
+		
 	}
 
 
 	public void setBalloonPosition(Point2D balloonPosition) {
-		this.balloonPosition = balloonPosition;
+		position = balloonPosition;
 	}
 
 
 	public double getBalloonSpeed() {
-		return balloonSpeed;
+		return super.getSpeed();
 	}
 
 
-	public void setBalloonSpeed(double balloonSpeed) {
-		this.balloonSpeed = balloonSpeed;
+	public void setBalloonSpeed(int balloonSpeed) {
+		speed = balloonSpeed;
 	}
 
+	public int getID(){
+		return super.getID();
+		}
 
 	public BalloonColors getColor() {
 		return color;
@@ -74,16 +73,27 @@ public class Balloon {
 	
 	public void move(int amplitude, int frequency){
 		
-		double x = balloonPosition.getX();
-		double y = balloonPosition.getY();
+		double x = position.getX();
+		double y = position.getY();
 		
 		x = amplitude * Math.sin(frequency * y);
 		
 		if( rising ){
-			y = y - balloonSpeed;
+			y = y - speed;
 		}
 		
-		balloonPosition.setLocation(x,y); 
-	} 
-}
+		position.setLocation(x,y);
+		
+	
+		
+		
+	}
+	
+	
+	
+	
+	
 
+	
+
+}
