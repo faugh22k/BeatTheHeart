@@ -1,5 +1,10 @@
+package view;
 import java.util.ArrayList;
 import org.newdawn.slick.*;
+
+import beatTheHeart.Balloon;
+import beatTheHeart.Goodie;
+
 
 public class View{
 

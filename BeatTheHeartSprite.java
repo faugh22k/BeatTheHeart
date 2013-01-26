@@ -1,5 +1,11 @@
+package view;
+
 import java.awt.geom.Point2D;
 import org.newdawn.slick.*;
+import beatTheHeart.Balloon;
+import beatTheHeart.Goodie;
+import beatTheHeart.Stuff;
+
 
 public class BeatTheHeartSprite {
 	protected Image img;

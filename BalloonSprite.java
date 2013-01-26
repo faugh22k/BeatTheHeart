@@ -1,4 +1,9 @@
+package view;
+
 import org.newdawn.slick.*;
+import beatTheHeart.Balloon;
+import beatTheHeart.Goodie;
+import beatTheHeart.Stuff;
 
 public class BalloonSprite extends BeatTheHeartSprite {
 	
@@ -11,7 +16,8 @@ public class BalloonSprite extends BeatTheHeartSprite {
 
 	public void init() throws SlickException {
 		super.init();
-		img = new Image("pics/heart_balloon_shineString_overlay.png");
+		//img = new Image("pics/heart_balloon_shineString_overlay.png");
+		img = new Image("pics/heart_yellow.png");
 	}
 
 }

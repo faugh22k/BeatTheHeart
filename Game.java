@@ -1,4 +1,10 @@
+/*package view;
+
 import org.newdawn.slick.*;
+import beatTheHeart.Balloon;
+import beatTheHeart.Goodie;
+import beatTheHeart.Stuff;
+
 public class Game extends BasicGame{
 
 private View view;
@@ -39,4 +45,4 @@ private View view;
      app.setDisplayMode(800, 600, false);
      app.start();
   }
-}
+}*/

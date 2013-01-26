@@ -1,4 +1,10 @@
+package view;
+
 import org.newdawn.slick.*;
+import beatTheHeart.Balloon;
+import beatTheHeart.Goodie;
+import beatTheHeart.GoodieTypes;
+import beatTheHeart.Stuff;
 
 public class GoodieSprite extends BeatTheHeartSprite {
 	
