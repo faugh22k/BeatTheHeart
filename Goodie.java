@@ -6,7 +6,7 @@ public class Goodie extends Stuff{
 	
 	private GoodieTypes type;
 	
-	public Goodie( int speed, Point2D position, int id ){
+	public Goodie(int speed, Point2D.Double position, int id){
 		super( speed, position, id );
 		
 		double tmp = Math.random();
@@ -18,13 +18,15 @@ public class Goodie extends Stuff{
 
 	public void move(){
 		position.setLocation(position.getX(), position.getY() + speed);
+		
+		System.out.println("googie id = " + id + ", x = " + position.getX() + ", y = " + position.getY());
 	}
 	
-	public Point2D getPosition() {
+	public Point2D.Double getPosition() {
 		return super.getPosition();
 	}
 
-	public void setPosition(Point2D GoodiePosition) {
+	public void setPosition(Point2D.Double GoodiePosition) {
 		position = GoodiePosition;
 	}
 

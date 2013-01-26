@@ -3,13 +3,13 @@ package beatTheHeart;
 import java.awt.geom.Point2D;
 
 
-public class Stuff {
+public abstract class Stuff {
 
-	protected Point2D position;
+	protected Point2D.Double position;
 	protected int speed;
 	protected int id;
 	
-	public Stuff( int speed, Point2D position, int id){
+	public Stuff( int speed, Point2D.Double position, int id){
 		
 		this.position = position;
 		this.speed = speed;
@@ -17,11 +17,11 @@ public class Stuff {
 
 	}
 
-	public Point2D getPosition() {
+	public Point2D.Double getPosition() {
 		return position;
 	}
 
-	public void setPosition(Point2D position) {
+	public void setPosition(Point2D.Double position) {
 		this.position = position;
 	}
 
@@ -40,5 +40,7 @@ public class Stuff {
 	public void setID(int id) {
 		this.id = id;
 	} 
+	
+	public abstract void move();
 
 }

@@ -11,10 +11,20 @@ public class Balloon extends Stuff{
 	
 	private boolean rising;
 	
-	public Balloon( int speed, Point2D position, int balloonID ){
+	private int amplitude;
+	private int frequency;
+	private int LIMIT;
+	
+	
+	public Balloon(int speed, Point2D.Double position, int balloonID){
 		super( speed, position, balloonID );
 		
 		rising = true;
+		
+		amplitude = 3;
+		frequency = 2;
+		
+		LIMIT = 5;
 	}
 
 
@@ -34,10 +44,13 @@ public class Balloon extends Stuff{
 	}
 
 
-	public void setBalloonPosition(Point2D balloonPosition) {
+	public void setBalloonPosition(Point2D.Double balloonPosition) {
 		position = balloonPosition;
 	}
 
+	public int getLimit(){
+		return LIMIT;
+	}
 
 	public double getBalloonSpeed() {
 		return super.getSpeed();
@@ -71,7 +84,8 @@ public class Balloon extends Stuff{
 		this.numberOfClicks = numberOfClicks;
 	}
 	
-	public void move(int amplitude, int frequency){
+	@Override
+	public void move(){
 		
 		double x = position.getX();
 		double y = position.getY();
@@ -82,18 +96,7 @@ public class Balloon extends Stuff{
 			y = y - speed;
 		}
 		
-		position.setLocation(x,y);
-		
-	
-		
-		
-	}
-	
-	
-	
-	
-	
-
-	
-
+		System.out.println("balloon. id = " + id + ", x = " + x + ", y = " + y);
+		position.setLocation(x,y); 
+	} 
 }
